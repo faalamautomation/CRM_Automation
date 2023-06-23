@@ -1,0 +1,35 @@
+name: Cypress Tests
+
+on: 
+  push:
+    branches:
+    - main
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          run: npm install
+          start: npx cypress run --headed --browser chrome
+          continue-on-error: true
+      - name: Copy test execution videos and screenshots
+        run: |
+         mkdir public
+         cp -r cypress/videos public/videos
+         cp -r cypress/screenshots public/screenshots
+      - name: Merge test reports
+        run: npm run combine:report
+      - name: Generate HTML report
+        run: npm run generate:report
+      - name: Deploy report page to Github Page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+         github_token: ${{secrets.GITHUB_TOKEN}}
+         publish_dir: ./public
