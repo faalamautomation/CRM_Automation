@@ -1,0 +1,20 @@
+{
+    "productName1": "Skin Care",
+    "productName2": "Baby Lotion",
+    "productValue1": "100",
+    "productValue2": "-0.5",
+    "productCount1": "-5.5",
+    "productCount2": "-10",
+    "taxPercent1": "10.5",
+    "taxPercent2": "20",
+    "productName3": "Honey",
+    "productName4": "Potato Chips",
+    "productValue3": "50",
+    "productValue4": "5",
+    "productCount3": "5.5",
+    "productCount4": "10.6",
+    "taxPercent3": "11.5",
+    "taxPercent4": "0.1",
+    "index1": "0",
+    "index2": "1"
+}

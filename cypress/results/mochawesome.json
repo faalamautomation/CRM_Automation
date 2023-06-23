@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-06-14T11:56:27.611Z",
+    "end": "2023-06-14T11:57:29.170Z",
+    "duration": 61559,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c2e82134-d79a-4db2-92d2-dbdd257ef297",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Pipedrive-tests\\webvisit.cy.js",
+      "file": "cypress\\e2e\\Pipedrive-tests\\webvisit.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "074493f1-bedd-467b-8b7a-2afaa6def407",
+          "title": "example to-do app",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test 1",
+              "fullTitle": "example to-do app Test 1",
+              "timedOut": null,
+              "duration": 58888,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//  const loginpage=new LoginPage()\ncy.wait(3000);\ncy.get('.banner-actions-container > #onetrust-accept-btn-handler').click(); //cookie accept\ncy.get('.puco-header__right-wrapper .puco-navigation-link.puco-navigation-link .puco-navigation-link__text').click(); //login link\n_LoginPage.LoginPage.getTypeEmail(leadsData.email1);\n//cy.get('#login').type('fahadalamgircsd@gmail.com') //loginfield type(loginData.email1)\n_LoginPage.LoginPage.getPassField(leadsData.password1);\n// cy.get('#password').type('Mount#5goat')   //passwordfield\n_LoginPage.LoginPage.getLogin();\n//cy.get('.login .puco-button').click()      //loginbutton\n// console.log('test 1')\ncy.wait(10000);\n_LeadsInboxPage.LeadsInboxPage.getLeadsInboxPage();\n// cy.get('a[aria-label=\"Leads\"]').click()   //leads page\n//cy.get('div[id=\"froot-nav\"] .sc-kgTSHT.fDodrE.active .sc-dIfARi.faJwpy').click()\ncy.wait(4000);\n_LeadsInboxPage.LeadsInboxPage.addNewLead();\n// cy.get('[data-testid=\"AddLeadButton\"]').click()  //Add Lead button\ncy.wait(5000);\n//cy.get('[data-test-key=\"related_person_id\"]>div>div>div[role=\"combobox\"]').type('jascobs') //contact person\n//cy.xpath('//div[@class=\"cui5-modal__wrap\"]/following::input[1]').type('Merrylyn')\ncy.wait(2000);\n_LeadsInboxPage.LeadsInboxPage.addPerson(leadsData.personName);\n//cy.get('.cui5-popover__inner .cui5-dropmenu').click() // Add as new contact\n_LeadsInboxPage.LeadsInboxPage.addcompanyName(leadsData.companyName);\n//cy.get('[data-test-key=\"related_org_id\"]>div>div>div[role=\"combobox\"]').type('jacobssons') // organization\n//cy.xpath('//div[@class=\"cui5-modal__wrap\"]/following::input[2]').type('Kitkat')\n_LeadsInboxPage.LeadsInboxPage.addLeadTitle(leadsData.titleName);\n//cy.get('[data-test-key=\"title\"]>div>div[class=\"cui5-input ff_editMode\"]').clear().type('jacobsss company') //title\ncy.wait(2000);\n//cy.xpath('//div[@class=\"cui5-modal__wrap\"]/following::input[3]').clear().type('Bisconi Branding')\n_LeadsInboxPage.LeadsInboxPage.addLeadPrice(leadsData.leadPrice);\n//cy.get('[data-test-key=\"deal_value\"]>div>div>div>div[class=\"cui5-input ff_v9130__InputSelectCompound__input__VK9\"]').type(1500) //deal value\n//cy.xpath('//div[@class=\"cui5-modal__wrap\"]/following::input[4]').type('1000')\n_LeadsInboxPage.LeadsInboxPage.leadCurrency(leadsData.currencyType);\n//cy.get('div[data-test-key=\"deal_value\"] div[role=\"combobox\"]').click() //deal value dropdown\n//cy.get('div[data-test-key=\"deal_value\"] div[role=\"combobox\"]>span>span').type('Fiji')\n// cy.get('[data-test-key=\"deal_value\"]>div>div>div[aria-haspopup=\"listbox\"] > span[role=\"button\"] > svg[class=\"cui5-icon cui5-icon--color-primary cui5-icon--size-s cui5-select__toggle\"]').type('Fiji{enter}')\n//cy.get('div[class=\"cui5-input cui5-input--icon cui5-select__filter\"]').type('Fiji{enter}') //deal currency\n_LeadsInboxPage.LeadsInboxPage.leadLabel();\n// cy.get('[data-test-key=\"labels\"] div[class=\"react-tagsinput\"]').click()  //deal labels\n//cy.get('div[value=\"2d8504f3-eae0-46a9-9c39-96c945d2a8b8\"]').click() //hot label\n//cy.get('.ff_v9130__MultipleOptions__row__bBr span[role=\"button\"]').click() //label Field\n//cy.get('[data-test-key=\"title\"]').click()\n//cy.get('[data-test=\"add-modals-visibility-field\"] button[class=\"cui5-button cui5-button--variant-secondary ff_v9130__VisibilitySwitch__select__VS-\"]').click()\n_LeadsInboxPage.LeadsInboxPage.visibility(leadsData.visibilityChoice);\n//cy.get('[data-test=\"add-modals-visibility-field\"] > button[class=\"cui5-button cui5-button--variant-secondary ff_v9130__VisibilitySwitch__select__VS-\"]').click() //visibility modal dropdown\n//cy.get('div[class=\"ff_v9130__VisibilityOptions__title__OQI ff_v9130__VisibilityOptions__selected__hSe\"]').click()\n//cy.get('div[class=\"cui5-dropmenu\"] div[class=\"cui5-dropmenu__content\"] div[class=\"cui5-option cui5-option--selected ff_v9130__VisibilityOptions__option__lXi\"] div[class=\"ff_v9130__VisibilityOptions__textWrap__pzZ cui5-text\"]')\n//cy.get('[data-test=\"add-modals-visibility-field\"] button[class=\"cui5-button cui5-button--variant-secondary ff_v9130__VisibilitySwitch__select__VS-\"] span[class=\"cui5-button__label\"]').contains('All users').click()\n//cy.get('.ff_v9130__VisibilityOptions__title__OQI').contains('Item owner’s visibility group and sub-groups').click() //visibility option\n_LeadsInboxPage.LeadsInboxPage.companyPhone(leadsData.phoneNumber);\n//cy.get('[data-test-key=\"phone\"] div[class=\"cui5-input ff_v9130__InputSelectCompound__input__VK9\"]').type('00005256') //phone input //phone\ncy.wait(2000);\n_LeadsInboxPage.LeadsInboxPage.phoneType();\n//cy.get('[data-test-key=\"phone\"] span[role=\"button\"]').click()  //phone dropdown   //phone type\n//cy.get('div[value=\"other\"]').click() //phone type\ncy.wait(2000);\n//cy.get('div[data-test-key=\"deal_value\"] div[role=\"combobox\"] span[aria-label=\"close menu\"]').type('Fiji')\n//cy.get('div[class=\"ff_v9130__InputSelectCompound__compoundComponent__JpK\"] span[type=\"button\"]').eq(0).click().wait(2000).type('Dollar')\n//cy.pause()\n_LeadsInboxPage.LeadsInboxPage.companyEmail(leadsData.companyEmail);\n//cy.get('[data-test-key=\"email\"] div[class=\"cui5-input ff_v9130__InputSelectCompound__input__VK9\"]').type('dafacob45412@google.com') //email input\n_LeadsInboxPage.LeadsInboxPage.emailType();\n//cy.get('[data-test-key=\"email\"] span[role=\"button\"]').click() //email dropdown\n//cy.get('div[value=\"other\"]').click() //email type\n_LeadsInboxPage.LeadsInboxPage.saveButton();\n//cy.get('div[class=\"AddModal__footer--f5YoQ\"] button[data-test=\"add-modals-save\"]').click()  //save button\ncy.wait(2000);\n_LeadsInboxPage.LeadsInboxPage.closeMessageBar();\n_LeadsInboxPage.LeadsInboxPage.convertLeadToDeal();\n//cy.get('[data-testid=\"ConvertModalButton\"]').wait(3000).click()  // convert lead to deal button\ncy.wait(5000);\n_LeadsInboxPage.LeadsInboxPage.addProducts();\ncy.wait(1000);\n_LeadsInboxPage.LeadsInboxPage.pipeLineStage();\n//cy.get('[data-testid=\"pipeline-stage-option-5\"]').click() //pipeline stage\n_LeadsInboxPage.LeadsInboxPage.DatePicker(leadsData.dealDate);\n//cy.get('input[placeholder=\"MM/DD/YYYY\"]').click() //calendar\n//cy.get('button[class=\"cui5-button cui5-button--variant-secondary ff_v9130__DatePicker-header__next__xlu\"]').click() //date picker\n//cy.get('div[aria-label=\"month-2023-07\"] div[aria-label=\"day-13\"]').click() //date option\ncy.wait(3000);\n_LeadsInboxPage.LeadsInboxPage.visibility(leadsData.dealVisibilityChoice);\n//cy.get('[data-test=\"add-modals-visibility-field\"] > button[class=\"cui5-button cui5-button--variant-secondary ff_v9130__VisibilitySwitch__select__VS-\"]').click() // visibility drop down\n//cy.get('.ff_v9130__VisibilityOptions__title__OQI').contains('All users').click() //visibility option\ncy.wait(2000);\n_LeadsInboxPage.LeadsInboxPage.product(leadsData.productName, leadsData.productValue, leadsData.productCount, leadsData.taxPercent, leadsData.index1);\n//LeadsInboxPage.productPrice(leadsData.productValue)\n//LeadsInboxPage.productQuantity(leadsData.productCount)\n//LeadsInboxPage.productTax(leadsData.taxPercent)\n_LeadsInboxPage.LeadsInboxPage.addMoreProducts();\n//LeadsInboxPage.product(leadsData.productName)\n_LeadsInboxPage.LeadsInboxPage.product(leadsData.productName, leadsData.productValue, leadsData.productCount, leadsData.taxPercent, leadsData.index2);\n//LeadsInboxPage.productPrice(leadsData.productValue)\n//LeadsInboxPage.productQuantity(leadsData.productCount)\n//LeadsInboxPage.productTax(leadsData.taxPercent)\n_LeadsInboxPage.LeadsInboxPage.saveButton();\n//cy.get('[data-test=\"add-modals-save\"]').click() //save button\ncy.wait(5000);\n_DealsPage.DealsPage.dealWon();\n//cy.get('[data-testid=\"won-button\"]').click() //won button\ncy.wait(5000);\n// cy.get('cui5-button cui5-button--variant-secondary ff_v9130__DatePicker-header__next__xlu').click()\n_DealsPage.DealsPage.dealsPage();\n//cy.get('[aria-label=\"Deals\"]').click() //deals page\ncy.wait(4000);\n_DealsPage.DealsPage.dealsListView();\n//cy.get('[data-text=\"List\"]').click() // Listview of deals",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4000ms: `cy.type()` failed because this element:\n\n`<div class=\"cui5-input ff_v9140__InputSelectCompound__input__VK9\">...</div>`\n\nis being covered by another element:\n\n`<header class=\"Duplicates__header--huXdj\">...</header>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4000ms: `cy.type()` failed because this element:\n\n`<div class=\"cui5-input ff_v9140__InputSelectCompound__input__VK9\">...</div>`\n\nis being covered by another element:\n\n`<header class=\"Duplicates__header--huXdj\">...</header>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:139649:76)\n    at ensureDescendents (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:139700:5)\n    at ensureDescendentsAndScroll (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:139706:14)\n    at ensureElIsNotCovered (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:139837:5)\n    at runAllChecks (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:140017:52)\n    at retryActionability (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:140054:16)\n    at tryCatcher (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise.attempt.Promise.try (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:16018:29)\n    at whenStable (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:156168:65)\n    at <unknown> (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:155609:14)\n    at tryCatcher (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:16861:18)\n    at Promise._fulfill (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:16805:18)\n    at <unknown> (https://www.pipedrive.com/__cypress/runner/cypress_runner.js:18419:46)\nFrom Your Spec Code:\n    at LeadsInboxPage.companyEmail (webpack:///./cypress/support/Pages/LeadsInboxPage.js:107:23)\n    at Context.eval (webpack:///./cypress/e2e/Pipedrive-tests/webvisit.cy.js:123:18)",
+                "diff": null
+              },
+              "uuid": "bc90618c-87cf-4ec5-aa9e-f6fc331de7c6",
+              "parentUUID": "074493f1-bedd-467b-8b7a-2afaa6def407",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bc90618c-87cf-4ec5-aa9e-f6fc331de7c6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 58888,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
