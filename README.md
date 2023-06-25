@@ -12,7 +12,7 @@ Instructions for running tests locally on your system:
 ======================================================
 
 (1) First you need to open the VS CODE editor on your system and then open the terminal window and run the following command 
-   git clone "https://github.com/falamgirgeek/CRM_Automation.git" to clone the repository on your local system.
+   git clone "https://github.com/faalamautomation/CRM_Automation.git" to clone the repository on your local system.
 
 (2) Once you setup the directory there, then you need to run the following command "npm install" to install the dependencies of the project.
 
